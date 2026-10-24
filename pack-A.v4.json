@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 1,
+  "version": 4,
   "levels": [
     {
       "id": 1,
@@ -108,24 +108,33 @@
       "timeLimit": 40,
       "boardWidth": 4,
       "boardHeight": 4,
+      "initiateCountdown": 0,
       "planningPhaseTimer": 0,
       "map": [
-        ["0", "0", "0", "E"],
+        ["E", "0", "0", "0"],
         ["0", "0", "0", "0"],
         ["0", "0", "0", "0"],
         ["SR", "0", "0", "W"]
       ],
       "inventory": {
         "NW": 1,
-        "SE": 1
+        "SW": 1
       },
-      "packetDelays": [1000],
+      "packetDelays": [100],
       "tutorial": {
         "steps": [
           {
             "type": "slider",
             "targetValue": -1,
-            "text": "Security is tightening. Hold the SPD slider DOWN to slow time. This gives you a window to react."
+            "text": "Hold the OVERCLOCK GEAR (the SPD slider) DOWN to slow time. This gives you a window to react.",
+            "before": [
+              {
+                "say": "The packet auto-launched, and it's moving too fast for a manual drop."
+              },
+              {
+                "say": "I'm unlocking the OVERCLOCK GEAR for you. Use it well — I can't do this twice."
+              }
+            ]
           },
           {
             "type": "select",
@@ -140,31 +149,29 @@
             "text": "Place it here to redirect the packet UP before it hits the firewall."
           },
           {
-            "type": "select",
-            "tile": "SE",
-            "text": "Now, select the [ ╔ ] deflector."
-          },
-          {
             "type": "place",
-            "tile": "SE",
+            "tile": "SW",
             "targetX": 2,
             "targetY": 0,
-            "text": "Place it next to the exit node."
+            "text": "The [ ╗ ] is already in hand. Place it here to turn the packet toward the exit node."
           },
           {
             "type": "slider",
             "targetValue": 1,
-            "text": "OVERCLOCK NOW. Push the slider UP to resume full speed."
+            "text": "OVERCLOCK NOW. Push the gear UP to resume full speed."
           }
         ],
-        "successMessage": "Good. You've mastered the throttle. Keep it steady."
+        "successMessage": "Good. The gear is yours now. Keep it steady."
       },
-      "dialogues": ["They've detected our signature. Security protocols are escalating.", "I can't freeze time anymore, but I've patched in a throttle script.", "Hold the SPD slider DOWN to slow the system clock. It'll give you time to react.", "Route the packet around the new barriers. Stay sharp."],
+      "dialogues": ["They've detected our signature. Security protocols are escalating."],
       "hardPause": {
         "triggerY": 3,
         "triggerX": 1,
-        "text": "WAIT! The packet is moving too fast for a manual drop. Look at the SPD slider on the left. I've suspended time until you engage the throttle.",
+        "text": "WAIT! I've frozen the system clock. It took almost everything I had left. I made a sacrifice to save you, partner.",
         "then": "tutorial"
+      },
+      "moments": {
+        "victory": ["Close call, partner. Too close.", "If the Overclock Gear sits on the wrong side for your hand, you can move it in the terminal SETTINGS (THROTTLE SIDE)."]
       },
       "speed": 80
     },
