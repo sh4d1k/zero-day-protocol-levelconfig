@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 4,
+  "version": 7,
   "levels": [
     {
       "id": 1,
@@ -86,7 +86,7 @@
         ]
       },
       "moments": {
-        "victory": ["You were made for this."]
+        "victory": ["You were made for this.", "Let's proceed to the next node."]
       },
       "dialogues": ["System breach successful. I've established a low-level uplink.", "Target is the green node. We need to route the payload there."],
       "postPlacementDialogues": ["Deflector locked. Trajectory routed away from the grid boundary.", "Initiate manual uplink from the compromised node."],
@@ -126,13 +126,13 @@
           {
             "type": "slider",
             "targetValue": -1,
-            "text": "Hold the OVERCLOCK GEAR (the SPD slider) DOWN to slow time. This gives you a window to react.",
+            "text": "Hold the OVERCLOCK GEAR DOWN to slow time. This gives you a window to react.",
             "before": [
               {
-                "say": "The packet auto-launched, and it's moving too fast for a manual drop."
+                "say": "I've frozen the system clock. It took almost everything I had left."
               },
               {
-                "say": "I'm unlocking the OVERCLOCK GEAR for you. Use it well — I can't do this twice."
+                "say": "I'll give you my OVERCLOCK GEAR, the one I used to freeze time. Use it well."
               }
             ]
           },
@@ -167,11 +167,11 @@
       "hardPause": {
         "triggerY": 3,
         "triggerX": 1,
-        "text": "WAIT! I've frozen the system clock. It took almost everything I had left. I made a sacrifice to save you, partner.",
+        "text": "WAIT! The packet auto-launched, and it's moving too fast.",
         "then": "tutorial"
       },
       "moments": {
-        "victory": ["Close call, partner. Too close.", "If the Overclock Gear sits on the wrong side for your hand, you can move it in the terminal SETTINGS (THROTTLE SIDE)."]
+        "victory": ["Close call, partner. Too close.", "If the Overclock Gear sits on the wrong side for your hand, you can move it in the terminal SETTINGS (OVERCLOCK GEAR SIDE)."]
       },
       "speed": 80
     },
@@ -202,7 +202,7 @@
         "SE": 1,
         "NW": 1
       },
-      "dialogues": ["Resources are low. We only have two deflectors for this entire sector.", "You'll need to 'hot-swap' your hardware. Once a packet passes a deflector, it's no longer needed there.", "Hold the screen to slow time, then tap a placed deflector to pull it back into your inventory.", "Recycle your tools to reach the server. Efficiency is the only way through."]
+      "dialogues": ["Resources are low. We only have two deflectors for this entire sector.", "You'll need to 'hot-swap' your hardware. Once a packet passes a deflector, it's no longer needed there.", "Hold the Overclock Gear down to slow time, then tap a placed deflector to pull it back into your inventory.", "Recycle your tools to reach the server. Efficiency is the only way through."]
     },
     {
       "id": 4,
@@ -864,7 +864,7 @@
         "NE": 1,
         "SW": 1
       },
-      "dialogues": ["Patrol grid. There is a Sentry ICE sweeping the mid-corridor — autonomous, on its own clock, and it does not care how fast you throttle the line.", "It runs the full width and parks for six seconds at each end before turning. That pause is your window. Watch it once before you commit anything.", "It eats any payload it closes on. Worse, it shoulders your nodes off the board — anything you leave standing in the corridor comes straight back to your tray.", "There is no way around row three. Build the crossing, take the window, and be ready to rebuild it every time the sweep comes back."]
+      "dialogues": ["Patrol grid. There is a Sentry ICE sweeping the mid-corridor — autonomous, on its own clock, and it does not care how hard you push the Overclock Gear.", "It runs the full width and parks for six seconds at each end before turning. That pause is your window. Watch it once before you commit anything.", "It eats any payload it closes on. Worse, it shoulders your nodes off the board — anything you leave standing in the corridor comes straight back to your tray.", "There is no way around row three. Build the crossing, take the window, and be ready to rebuild it every time the sweep comes back."]
     },
     {
       "id": 21,
@@ -1108,7 +1108,7 @@
       ],
       "packetDelays": [0, 0, 0, 0],
       "inventory": {},
-      "dialogues": ["Two shutters on the only line in. They run on a fixed beat — no sensor, no trigger, nothing to spoof. They are just doors, and doors do not care that you are invisible.", "Watch the near one cycle before you fire anything. Red is shut, and a payload that reaches a shut door is gone. Amber means it is coming down — anything entering then is already too late.", "Fire when the near shutter goes green. It stays up three seconds and drops for two — you have better than two seconds of green to catch it in.", "Now look at the far one. Same beat, but it trails the near one by the length of the climb between them. Watch it and it looks like a wall. It is not: a payload that caught the near door on green arrives at the far one while it is still open. Get the rhythm and the whole line is one move.", "And leave the throttle where you like. The doors keep their own time regardless — it only moves your payloads."]
+      "dialogues": ["Two shutters on the only line in. They run on a fixed beat — no sensor, no trigger, nothing to spoof. They are just doors, and doors do not care that you are invisible.", "Watch the near one cycle before you fire anything. Red is shut, and a payload that reaches a shut door is gone. Amber means it is coming down — anything entering then is already too late.", "Fire when the near shutter goes green. It stays up three seconds and drops for two — you have better than two seconds of green to catch it in.", "Now look at the far one. Same beat, but it trails the near one by the length of the climb between them. Watch it and it looks like a wall. It is not: a payload that caught the near door on green arrives at the far one while it is still open. Get the rhythm and the whole line is one move.", "And leave the Overclock Gear where you like. The doors keep their own time regardless — it only moves your payloads."]
     },
     {
       "id": 25,
