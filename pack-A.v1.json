@@ -19,7 +19,7 @@
       "planningPhaseTimer": 0,
       "map": [
         ["0", "0", "E"],
-        ["B", "W", "0"],
+        ["0", "W", "0"],
         ["SU", "0", "0"]
       ],
       "inventory": {
@@ -40,7 +40,8 @@
                   "url": "https://mtxgames.lk/guides/tiles/deflector_se/page_1.html",
                   "title": "FIELD MANUAL // TACTICAL ROUTING",
                   "subtitle": "SYSTEM DIRECTIVE // TILE PLACEMENT",
-                  "fallbackText": "Select the [ ╔ ] deflector from your inventory and place it in cell (0, 0) to route the payload away from the grid boundary."
+                  "fallbackText": "Select the [ ╔ ] deflector from your inventory and place it in cell (0, 0) to route the payload away from the grid boundary.",
+                  "totalPages": 3
                 }
               }
             ]
@@ -82,28 +83,17 @@
               }
             ]
           }
-        ],
-        "successMessage": "Payload launched. Monitoring trajectory..."
+        ]
+      },
+      "moments": {
+        "victory": ["You were made for this."]
       },
       "dialogues": ["System breach successful. I've established a low-level uplink.", "Target is the green node. We need to route the payload there."],
       "postPlacementDialogues": ["Deflector locked. Trajectory routed away from the grid boundary.", "Initiate manual uplink from the compromised node."],
-      "hardPause": {
-        "triggerY": 1,
-        "triggerX": 0,
-        "text": "Ahh Energy block they are double edge swords..",
-        "then": "resume",
-        "guide": {
-          "url": "https://mtxgames.lk/guides/tiles/energy_block/page_1.html",
-          "title": "FIELD MANUAL // ENERGY CACHE",
-          "subtitle": "SYSTEM DIRECTIVE // DOUBLE-EDGED PROTOCOL",
-          "fallbackText": "Energy caches are double-edged: collecting them awards +200 integrity points, but missing them incurs penalties."
-        }
-      },
       "tutorialPhases": {
         "placementGuideUrl": "https://mtxgames.lk/guides/tiles/deflector_se/page_1.html",
         "deflectorGuideUrl": "https://mtxgames.lk/guides/tiles/deflectors/page_1.html",
-        "launchGuideUrl": "https://mtxgames.lk/guides/tiles/start_node/page_1.html",
-        "energyGuideUrl": "https://mtxgames.lk/guides/tiles/energy_block/page_1.html"
+        "launchGuideUrl": "https://mtxgames.lk/guides/tiles/start_node/page_1.html"
       }
     },
     {
