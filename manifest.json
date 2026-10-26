@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "publishedAt": "2026-10-26T02:05:31.258Z",
+  "publishedAt": "2026-10-26T06:36:27.998Z",
   "packs": {
     "A": {
-      "version": 9,
-      "file": "pack-A.v9.json",
-      "sha256": "55692ecf5ed146df836780b2d2a394e499f4495ac1fa140f823dea8fe68f72eb",
+      "version": 10,
+      "file": "pack-A.v10.json",
+      "sha256": "41ca0d6ecd36ca3a4b74cdf3352861b2fddabcb81c34d0566061e4db3443178a",
       "minBuildCode": 14
     },
     "B": {
@@ -19,6 +19,12 @@
       "file": "pack-C.v1.json",
       "sha256": "e642a7c75c4819e506aaff76368ca8d74620327f529f642d5105e66a1e0cebc3",
       "minBuildCode": 14
+    },
+    "Q": {
+      "version": 1,
+      "file": "pack-Q.v1.json",
+      "sha256": "367860bf5fc65f6e8910f74d01e8c102eaee49bf0dcff00559afd4032f6f919b",
+      "minBuildCode": 14
     }
   },
   "layouts": {
@@ -29,7 +35,7 @@
     },
     "groups": {
       "QA": {
-        "BOOT_ORIGIN": [1, 2, 30, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
+        "BOOT_ORIGIN": [1, 2, 1603, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]
       }
     }
   }
