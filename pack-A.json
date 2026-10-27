@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 10,
+  "version": 1,
   "levels": [
     {
       "id": 1,
@@ -179,6 +179,120 @@
     },
     {
       "id": 3,
+      "title": "TARGET: RELAY // INCIDENT LOG",
+      "speed": 120,
+      "cipherGate": false,
+      "baseRewards": {
+        "xp": 175,
+        "dc": 85,
+        "qc": 0
+      },
+      "timeLimit": 40,
+      "boardWidth": 5,
+      "boardHeight": 5,
+      "initiateCountdown": 3000,
+      "planningPhaseTimer": 0,
+      "map": [
+        ["PSE", "0", "0", "0", "E"],
+        ["0", "0", "0", "0", "0"],
+        ["B", "0", "B", "0", "B"],
+        ["0", "0", "0", "0", "0"],
+        ["SU", "0", "0", "B", "0"]
+      ],
+      "inventory": {
+        "SW": 1,
+        "NW": 1,
+        "NE": 1
+      },
+      "packetDelays": [2000, 2000, 0],
+      "dialogues": ["Incident report from the last node just came in. That packet didn't launch by accident.", "The node was set to auto-launch. It fired before you could even touch the board.", "Freezing time to stop it nearly burned us out. We can't let that happen again.", "Everything we needed to know was right there, in the integrity hub."],
+      "tutorial": {
+        "steps": [
+          {
+            "type": "select_cell",
+            "targetX": 4,
+            "targetY": 4,
+            "text": "Tap the empty corner cell, bottom right. That marks where the next tile goes.",
+            "before": [
+              {
+                "guide": {
+                  "url": "https://mtxgames.lk/guides/hud/integrity_hub/page_1.html",
+                  "title": "FIELD MANUAL // INTEGRITY HUB",
+                  "subtitle": "SYSTEM DIRECTIVE // LAUNCH SCHEDULE",
+                  "fallbackText": "The integrity hub shows one box per packet. An empty box fills up and launches its packet on its own. A II box waits until you tap the start node.",
+                  "pages": [1, 2, 3]
+                }
+              },
+              {
+                "say": "Read the hub before every run. It tells you how many packets we're sending, and when each one goes."
+              },
+              {
+                "say": "Now, the route. That grey deflector in the corner is welded into the grid. We bring the rest."
+              }
+            ]
+          },
+          {
+            "type": "fill_cell",
+            "tile": "NW",
+            "targetX": 4,
+            "targetY": 4,
+            "text": "Now tap the [ ╝ ] in your inventory. It flies straight to the marked cell."
+          },
+          {
+            "type": "select_cell",
+            "targetX": 2,
+            "targetY": 0,
+            "text": "Mark the top cell of the middle column.",
+            "before": [
+              {
+                "say": "See the yellow cells? Energy caches."
+              },
+              {
+                "guide": {
+                  "url": "https://mtxgames.lk/guides/tiles/energy_block/page_1.html",
+                  "title": "FIELD MANUAL // ENERGY CACHE",
+                  "subtitle": "SYSTEM DIRECTIVE // DOUBLE-EDGED PROTOCOL",
+                  "fallbackText": "Energy caches are a double-edged sword: route the payload through them to strengthen the uplink, leave them behind and the system punishes you.",
+                  "pages": [1]
+                }
+              },
+              {
+                "say": "Energy is a double-edged sword. Run the payload through it and the uplink holds stronger. Leave it behind and the system punishes us."
+              },
+              {
+                "say": "So we take every cache on this node."
+              }
+            ]
+          },
+          {
+            "type": "fill_cell",
+            "tile": "SW",
+            "targetX": 2,
+            "targetY": 0,
+            "text": "Send the [ ╗ ] there. It turns the payload down through the middle cache."
+          },
+          {
+            "type": "select_cell",
+            "targetX": 2,
+            "targetY": 4,
+            "text": "Now mark the bottom cell of the same column."
+          },
+          {
+            "type": "fill_cell",
+            "tile": "NE",
+            "targetX": 2,
+            "targetY": 4,
+            "text": "Send the [ ╚ ]. It turns the payload right, through the last caches and up to the server."
+          }
+        ],
+        "successMessage": "Route locked. Watch the hub."
+      },
+      "moments": {
+        "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
+      }
+    },
+    {
+      "id": 5,
       "title": "TARGET: MAINFRAME // RECYCLE",
       "speed": 120,
       "cipherGate": false,
@@ -207,7 +321,7 @@
       "dialogues": ["Resources are low. We only have two deflectors for this entire sector.", "You'll need to 'hot-swap' your hardware. Once a packet passes a deflector, it's no longer needed there.", "Hold the Overclock Gear down to slow time, then tap a placed deflector to pull it back into your inventory.", "Recycle your tools to reach the server. Efficiency is the only way through."]
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "TARGET: DATA VAULT // DEEP DIVE",
       "speed": 120,
       "baseRewards": {
@@ -246,7 +360,7 @@
       "dialogues": ["We're approaching the Data Vault's inner sanctum.", "The grid is larger, and the firewall patterns are tighter. No more hand-holding.", "Trust your instincts. Get that data."]
     },
     {
-      "id": 5,
+      "id": 9,
       "title": "TARGET: AUX NODE // U-TURN TEST",
       "speed": 120,
       "baseRewards": {
@@ -282,7 +396,7 @@
       "dialogues": ["I've scavenged some experimental hardware: The U-Turn Bounce Pad (🔄).", "It reflects the payload 180 degrees. It's perfect for when you're backed into a corner.", "Try it out on this AUX node."]
     },
     {
-      "id": 6,
+      "id": 10,
       "title": "TARGET: CORE SERVER // THE GAUNTLET",
       "speed": 120,
       "baseRewards": {
@@ -313,7 +427,7 @@
       "dialogues": ["The Core Server. The heart of the machine.", "Everything you've learned comes down to this.", "Inject the payload. End this."]
     },
     {
-      "id": 7,
+      "id": 11,
       "speed": 120,
       "title": "TARGET: MAINFRAME // PURE LOGIC",
       "baseRewards": {
@@ -356,7 +470,7 @@
       "dialogues": ["We've hit a regional mainframe. The grid architecture here is massive (7x9).", "The system won't hold your hand anymore. Red nodes won't disable on your keypad, and Green nodes won't auto-lock.", "Navigate the firewall maze, grab the energy block, and get out. Pure deduction required."]
     },
     {
-      "id": 8,
+      "id": 12,
       "speed": 120,
       "title": "TARGET: LOGIC GATE // THE FLIP-FLOP",
       "baseRewards": {
@@ -397,7 +511,7 @@
       "dialogues": ["New obstacle detected: Logic Gates.", "The node in the center is a Logic Switch. Routing a packet through it will flip its channel state.", "Gate [ 0 ] is open when the channel is OFF. Gate [ 1 ] is open when the channel is ON.", "You have two packets. Route the first to the top server, which will flip the switch and open the bottom gate for your second packet."]
     },
     {
-      "id": 9,
+      "id": 13,
       "speed": 120,
       "title": "TARGET: DATA BUS // THE SHIFT REGISTER",
       "baseRewards": {
@@ -426,7 +540,7 @@
       "dialogues": ["New hardware, pulled from a decommissioned switch: the Shift Register (⇉).", "It doesn't turn the payload. It displaces it one lane sideways — instantly. No travel time, no change of heading.", "This node's lanes are isolated. Every one of them dead-ends into the ceiling except the lane holding the server.", "Chain them across the bus row. Each register hands the payload to the next one inside the same clock cycle."]
     },
     {
-      "id": 10,
+      "id": 14,
       "speed": 120,
       "title": "TARGET: SWITCH FABRIC // THE CROSSBAR",
       "baseRewards": {
@@ -461,7 +575,7 @@
       "dialogues": ["Two payloads, one server, and a crossbar you don't control.", "Both gates run off a single channel — [0] and [1] are never live at the same time. The switch on the lower bus flips which.", "There's more than one way through. The straight run gets both payloads home. The long way, through the left gate, passes an energy cache.", "Registers, deflectors, or both — your call. Just don't strand the second payload behind a gate you closed yourself."]
     },
     {
-      "id": 11,
+      "id": 15,
       "speed": 120,
       "title": "TARGET: SEQUENCER // THE BISTABLE",
       "baseRewards": {
@@ -491,7 +605,7 @@
       "dialogues": ["Salvaged a bistable latch off a dead sequencer — the Flip-Flop (↻).", "Every payload that crosses it leaves turning the opposite way to the last one. Right, then left, then right again.", "One tile, two routes. You don't get a second turn at that junction, so both branches have to work.", "There's a cache on each branch. Alternate cleanly and you take them both."]
     },
     {
-      "id": 12,
+      "id": 16,
       "speed": 120,
       "title": "TARGET: WAVELENGTH GATE // THE SPECTRUM LOCK",
       "baseRewards": {
@@ -527,7 +641,7 @@
       "dialogues": ["New firewall class on this node: Stateful ICE. It only passes a payload carrying its exact wavelength signature — anything else, uncoloured included, burns on contact.", "Salvaged a Color Spoofer off the breach kit. Route a payload through one and it inherits that colour instantly — watch for the callout confirming the shift. No charge limit, but a second spoofer overwrites the first, it doesn't stack.", "Spoof red before the first firewall. Clear it, and you're through into a second area.", "That routing plate at the junction is original hardware, not player-issued. Permanently welded in — can't pick it up, can't move it — but it turns exactly like the ones in your tray.", "Spoof blue in the second area. Clear the second firewall and you're straight into the server — no more turns after that one."]
     },
     {
-      "id": 13,
+      "id": 17,
       "speed": 120,
       "title": "TARGET: DARKNET RELAY // GHOST PROTOCOL",
       "baseRewards": {
@@ -561,7 +675,7 @@
       "dialogues": ["New hardware off the breach kit: a VPN Tunnel. Route a payload through it and it goes dark — cloaked, invisible to most of this node's defenses.", "A cloaked payload phases straight through physical barriers — walls, basic ICE bricks — like they aren't there. Watch the opacity drop when it goes dark.", "It's still cloaked on the other side. Cross another VPN to bring it back into the open — the server won't accept a payload it can't see.", "That second tunnel ahead is original hardware, permanently welded in — same toggle, can't be picked up or moved."]
     },
     {
-      "id": 14,
+      "id": 18,
       "speed": 120,
       "title": "TARGET: CIPHER VAULT // ASYMMETRIC HANDSHAKE",
       "baseRewards": {
@@ -597,7 +711,7 @@
       "dialogues": ["New objective type: the server ahead is locked. It won't accept any payload — cracked cipher or not — until its paired key has been delivered. Send one in without a key and see for yourself.", "There's an Asymmetric Key off to the side. Deflect a payload into the detour to pick it up, then the shift registers carry it back — no extra turns needed, they're free.", "Deliver it once and the lock opens for good. Every payload after that walks straight in, key or not.", "If a keyed payload goes down before reaching the server, the key simply waits back at the pickup for the next one — nothing is lost for good."]
     },
     {
-      "id": 15,
+      "id": 19,
       "speed": 120,
       "title": "TARGET: SUBSPACE TUNNEL // EVENT HORIZON",
       "baseRewards": {
@@ -649,7 +763,7 @@
       "dialogues": ["This one's a diagnostic relay, not a straight run — whoever built it left room to actually stress-test the tunnel instead of just walking through it once.", "Both ends sit in open floor now, not a single fixed lane. Approach from any side, redirect right after you land, even loop a payload back through a second time — the tunnel doesn't care, it just relocates whatever reaches its center, heading unchanged, every time.", "Three payloads, all yours to launch whenever you want. Send two in close together if you're curious what happens when both are mid-crossing at once."]
     },
     {
-      "id": 16,
+      "id": 20,
       "speed": 120,
       "title": "TARGET: LOAD BALANCER // FORK IN THE WIRE",
       "baseRewards": {
@@ -686,7 +800,7 @@
       "dialogues": ["New hazard, welded into this node: a Splitter. It's not something you deploy — it's ICE the server itself uses to mirror traffic it doesn't trust, and it duplicates whatever crosses it without asking.", "A Y-junction Splitter never touches the packet that hits it — that one keeps going exactly where it was headed. What comes out the side is a full second payload, same cipher state, same everything, just carrying a new heading.", "Every fragment counts now. The board remembers how many payloads are actually in flight, and it grows the instant a Splitter fires — losing one on the way down reads exactly like losing any other payload would.", "A few spare deflectors are yours if you'd rather reroute a fragment somewhere else entirely. The server doesn't care which path a payload takes, only that it arrives."]
     },
     {
-      "id": 17,
+      "id": 21,
       "speed": 120,
       "title": "TARGET: MEMORY BUS // BUFFER QUEUE",
       "baseRewards": {
@@ -729,7 +843,7 @@
       "dialogues": ["Detected an active Buffer node on this bus line. Unlike standard routing components, this is hardwired ICE — fixed in place, impossible to move or relocate.", "Any payload entering a Buffer is captured at the core and held indefinitely. If multiple payloads arrive, they stack inside an internal FIFO queue.", "The bus stays suspended until you manual-signal the release. Tap the Buffer cell to eject the oldest queued payload along its stored heading.", "Synchronize the flow carefully. Hold the second payload in the buffer until the security lock ahead has been fully decrypted."]
     },
     {
-      "id": 18,
+      "id": 22,
       "speed": 120,
       "title": "TARGET: MEMORY BUS // SHIFT RELAY",
       "baseRewards": {
@@ -784,7 +898,7 @@
       "dialogues": ["Advanced bus topology detected. A static Buffer node is anchored in the mid-sector, with server clearance locked behind a Stateful Firewall.", "Column 4 dead-ends into reinforced ICE. Deploy a Shift Register to push the payload laterally into the Buffer holding cell.", "Once stabilized, tap the Buffer to release. Route down to collect the cryptographic key and transmit through Subspace Tunnel WH-A.", "The top chamber is guarded by a bounce array. Warp through the tunnel, spoof red wavelength in the corridor, and breach the locked server."]
     },
     {
-      "id": 19,
+      "id": 23,
       "speed": 120,
       "title": "TARGET: DEAD SECTOR // THE MINEFIELD",
       "baseRewards": {
@@ -821,7 +935,7 @@
       "dialogues": ["Dead sector. Two mine belts across the approach, four charges total, and every charge covers a full cell in each direction — diagonals included. Nothing walks between them.", "Good news: a charge only fires once. Whatever trips it is gone, but the belt goes dark behind it and everything after you walks straight over the crater.", "Do not bother plating a live cell. A node dropped in the blast radius protects nothing — and when the charge goes, the node is fused to the board for good.", "Six payloads, all on your signal. Spend two to open the belts and you deliver four. Spend none and you deliver six — if you can work out how to cross a live belt without tripping it.", "Last read from the scan: the triggers are detection coils, not pressure plates. A cloaked payload walks right over a live charge and leaves it armed. Just remember the server will not take a payload still running dark."]
     },
     {
-      "id": 20,
+      "id": 24,
       "speed": 120,
       "title": "TARGET: PATROL GRID // THE SENTRY",
       "baseRewards": {
@@ -869,7 +983,7 @@
       "dialogues": ["Patrol grid. There is a Sentry ICE sweeping the mid-corridor — autonomous, on its own clock, and it does not care how hard you push the Overclock Gear.", "It runs the full width and parks for six seconds at each end before turning. That pause is your window. Watch it once before you commit anything.", "It eats any payload it closes on. Worse, it shoulders your nodes off the board — anything you leave standing in the corridor comes straight back to your tray.", "There is no way around row three. Build the crossing, take the window, and be ready to rebuild it every time the sweep comes back."]
     },
     {
-      "id": 21,
+      "id": 25,
       "speed": 120,
       "title": "TARGET: BLACK SITE // DEMOLITION",
       "baseRewards": {
@@ -920,7 +1034,7 @@
       "dialogues": ["Black site. Two ICE barriers, no way around either, and a Sentry running the approach corridor.", "You are carrying demolition charges now. Drop one and route a payload straight into it — the charge takes the payload with it, so every barrier you blow costs you a delivery.", "Blast shapes differ. The plus charge hits the four cells around it; the cross charge hits the four corners. Pick the one that reaches the ICE without burying the cell you still need to turn on.", "Anything caught in a blast is fused where it stands, and ICE just burns out grey — it stops blocking, it does not disappear.", "The Sentry will knock your charge off the board if it reaches it first. Then again, it is standing well inside the blast radius. Your call which way that race goes.", "One last thing: both barriers are basic ICE. A dark payload walks through those untouched — and a Sentry cannot see it either. Blow your way in, or slip in clean and lose nothing."]
     },
     {
-      "id": 22,
+      "id": 26,
       "speed": 120,
       "title": "TARGET: DEAD ZONE // THE SUPPRESSOR",
       "baseRewards": {
@@ -983,7 +1097,7 @@
       "dialogues": ["Suppression field across the only riser. Four cells of it, and it is live the whole run — anything crossing bare gets wiped.", "It can be smothered, though. Drop a node on a suppressed cell and the cell is safe to cross — the node absorbs it. Do it now, while the field is still cold: once transmission starts, nothing inside the footprint can be lifted again.", "Or take the head off. The emitter is not in the field — it never is — it is parked in that dead-end shaft on the far side. Reach it, put a charge under it, and the whole zone drops at once.", "Do not stage a charge inside the field. Three seconds in a live zone and it cooks by itself, and one plus-blast does not span four cells — you would lose the charge and clear nothing."]
     },
     {
-      "id": 23,
+      "id": 27,
       "speed": 120,
       "title": "TARGET: THE GAUNTLET // EVERYTHING AT ONCE",
       "baseRewards": {
@@ -1068,7 +1182,7 @@
       "dialogues": ["Everything they had left, stacked on one approach. Mine belt at the bottom, suppression field in the middle, and a Sentry running its line straight through the field.", "The mine belt seals row seven and only a detonation opens it, so the first payload is already spoken for. Feed it and move on.", "The field is an arch — five cells, and no single charge spans it. Smother it with nodes during planning, or go hunting: the emitter is parked in the east pocket, off the patrol line.", "Watch the Sentry in the field. It walks through its own side's suppression without a scratch, and it will not shoulder a node the field has clamped down — locked is locked, for it as much as for you.", "One warning. A node the field is holding is only held while the field lives. Catch that same node in a blast and it is welded for good — kill the emitter afterwards and everything else comes free, but that one stays where it is.", "Or run the whole gauntlet dark. Cloak crosses a live field and a Sentry cannot see you at all. Costs you nothing but the two tunnels — and it is the only way through here that spends no payload but the mine's."]
     },
     {
-      "id": 24,
+      "id": 28,
       "speed": 120,
       "title": "TARGET: CHECKPOINT // DEAD MAN'S SWITCH",
       "baseRewards": {
@@ -1113,7 +1227,7 @@
       "dialogues": ["Two shutters on the only line in. They run on a fixed beat — no sensor, no trigger, nothing to spoof. They are just doors, and doors do not care that you are invisible.", "Watch the near one cycle before you fire anything. Red is shut, and a payload that reaches a shut door is gone. Amber means it is coming down — anything entering then is already too late.", "Fire when the near shutter goes green. It stays up three seconds and drops for two — you have better than two seconds of green to catch it in.", "Now look at the far one. Same beat, but it trails the near one by the length of the climb between them. Watch it and it looks like a wall. It is not: a payload that caught the near door on green arrives at the far one while it is still open. Get the rhythm and the whole line is one move.", "And leave the Overclock Gear where you like. The doors keep their own time regardless — it only moves your payloads."]
     },
     {
-      "id": 25,
+      "id": 29,
       "speed": 120,
       "title": "TARGET: KEY ESCROW // DEAD DROP",
       "baseRewards": {
@@ -1156,7 +1270,7 @@
       "dialogues": ["Server's in escrow. It will not open for anything but the symmetric key, and that key is sitting in the west shaft.", "Understand what makes this one different. An asymmetric key is bookkeeping — lose the carrier and the key is simply back on its pedestal, waiting. A symmetric key is a physical object. Lose the carrier and it falls wherever the carrier was standing a moment earlier, and it stays there.", "There is a mine in the only climb. Feed it a payload and it is spent for good — and the key it was carrying lands one cell short of the blast, right in the middle of the route you just opened. Every payload after that walks past and picks it up. You only make the west detour once.", "Or run it dark. Cloak crosses the ring without dying and without arming it, so the key never leaves the carrier and the mine stays live behind you. Costs you nothing but the two tunnels — and it is the only way through here that spends no payload at all."]
     },
     {
-      "id": 26,
+      "id": 30,
       "speed": 120,
       "title": "TARGET: RELAY PICKET // IT TAKES THE TUNNEL",
       "baseRewards": {
@@ -1222,7 +1336,7 @@
       "dialogues": ["Two decks, one tunnel. The row between them is solid — there is no walking route across, for you or for anything else down there.", "There is a picket on the lower deck. Before you commit a single payload, understand what it does at the tunnel mouth: it does not turn around. It goes through.", "It comes out upstairs still climbing, then sweeps east along the ceiling of your run — and it parks on the cell at the top of your climb for six seconds at a time. The deck you were counting on is where it spends most of the run.", "You are firing all four by hand, so the timing is yours. The tunnel is only hot for a breath in each direction. The climb is the part that shuts."]
     },
     {
-      "id": 27,
+      "id": 31,
       "speed": 120,
       "title": "TARGET: THE VAULT // KILL THE POWER",
       "baseRewards": {
@@ -1344,7 +1458,7 @@
       "dialogues": ["Vault node. The riser is the only way up and there are two pickets standing on it, and the whole midsection is a live suppression field. You have one charge and two payloads. Nothing about this is generous.", "Stage the charge INSIDE the field, on the riser's shoulder — a charge left in a live zone cooks off by itself after three seconds. That is not a warning here, it is the plan: the blast throws to the corners, and the corners are where both pickets will be standing.", "The kill switch is up the west shaft, and the instant you throw it the field goes cold — which also snuffs the fuse. Throw it early and your charge never goes off, and those pickets never leave. Order matters more than speed here.", "So the shaft has two hold nodes. Send the first payload up and let it settle in the lower one. Sit there. Watch the charge cook and both pickets drop. Then tap it on.", "It carries on through the switch — one-shot, starts live, goes down once, never comes back — and settles into the upper hold node. Leave it. The server is still locked, and a payload that reaches a locked server is gone.", "Now the riser. There is basic ICE in it — go dark to cross, and come back out of the dark before the key, because a cloaked payload cannot pick anything up. Uncloak inside a live field and it kills you, which is precisely why the field has to be off first.", "Key out of the vault, paint it blue, and the lock on that firewall opens for a symmetric key and nothing else. Through the warp, take the second key, and shift east onto the server column — you have no deflector to spare for that corner, so use the register.", "Server open? Then wake the upper hold node. Your first payload still has a run to finish, straight up and along the top."]
     },
     {
-      "id": 28,
+      "id": 32,
       "speed": 120,
       "title": "TARGET: PRISM NODE // FULL SPECTRUM",
       "baseRewards": {
