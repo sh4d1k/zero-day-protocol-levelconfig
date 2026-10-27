@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 2,
+  "version": 3,
   "levels": [
     {
       "id": 1,
@@ -179,7 +179,11 @@
       "moments": {
         "victory": ["Close call, partner. Too close.", "If the Overclock Gear sits on the wrong side for your hand, you can move it in the terminal SETTINGS (OVERCLOCK GEAR SIDE)."]
       },
-      "speed": 80
+      "speed": 80,
+      "reset": {
+        "epoch": 1,
+        "action": "reset_rewards"
+      }
     },
     {
       "id": 3,
