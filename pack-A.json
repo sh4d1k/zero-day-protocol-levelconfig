@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 1,
+  "version": 2,
   "levels": [
     {
       "id": 1,
@@ -96,6 +96,10 @@
         "placementGuideUrl": "https://mtxgames.lk/guides/tiles/deflector_se/page_1.html",
         "deflectorGuideUrl": "https://mtxgames.lk/guides/tiles/deflectors/page_1.html",
         "launchGuideUrl": "https://mtxgames.lk/guides/tiles/start_node/page_1.html"
+      },
+      "reset": {
+        "epoch": 1,
+        "action": "reset_rewards"
       }
     },
     {
