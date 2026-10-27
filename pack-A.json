@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 3,
+  "version": 4,
   "levels": [
     {
       "id": 1,
@@ -181,7 +181,7 @@
       },
       "speed": 80,
       "reset": {
-        "epoch": 1,
+        "epoch": 2,
         "action": "reset_rewards"
       }
     },
@@ -297,6 +297,10 @@
       },
       "moments": {
         "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
+      },
+      "reset": {
+        "epoch": 1,
+        "action": "reset_rewards"
       }
     },
     {
