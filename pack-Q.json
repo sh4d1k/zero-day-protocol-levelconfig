@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "Q",
-  "version": 1,
+  "version": 2,
   "levels": [
     {
       "id": 1603,
@@ -116,6 +116,125 @@
       "moments": {
         "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
       }
+    },
+    {
+      "id": 1605,
+      "title": "TARGET: RELAY // INCIDENT LOG",
+      "speed": 120,
+      "cipherGate": false,
+      "baseRewards": {
+        "xp": 175,
+        "dc": 85,
+        "qc": 0
+      },
+      "timeLimit": 40,
+      "boardWidth": 5,
+      "boardHeight": 5,
+      "initiateCountdown": 3000,
+      "planningPhaseTimer": 0,
+      "map": [
+        ["PSE", "0", "0", "0", "E"],
+        ["0", "0", "0", "0", "0"],
+        ["B", "0", "B", "0", "B"],
+        ["0", "0", "0", "0", "0"],
+        ["SU", "0", "0", "B", "0"]
+      ],
+      "inventory": {
+        "SW": 1,
+        "NW": 1,
+        "NE": 1
+      },
+      "packetDelays": [2000, 2000, 0],
+      "dialogues": ["Incident report from the last node just came in. That packet didn't launch by accident.", "The node was set to auto-launch. It fired before you could even touch the board.", "Freezing time to stop it nearly burned us out. We can't let that happen again.", "Everything we needed to know was right there, in the integrity hub."],
+      "tutorial": {
+        "steps": [
+          {
+            "type": "select_cell",
+            "targetX": 4,
+            "targetY": 4,
+            "text": "Tap the empty corner cell, bottom right. That marks where the next tile goes.",
+            "before": [
+              {
+                "guide": {
+                  "url": "https://mtxgames.lk/guides/hud/integrity_hub/page_1.html",
+                  "title": "FIELD MANUAL // INTEGRITY HUB",
+                  "subtitle": "SYSTEM DIRECTIVE // LAUNCH SCHEDULE",
+                  "fallbackText": "The integrity hub shows one box per packet. An empty box fills up and launches its packet on its own. A II box waits until you tap the start node.",
+                  "pages": [1, 2, 3]
+                }
+              },
+              {
+                "say": "Read the hub before every run. It tells you how many packets we're sending, and when each one goes."
+              },
+              {
+                "say": "Now, the route. That grey deflector in the corner is welded into the grid. We bring the rest."
+              }
+            ]
+          },
+          {
+            "type": "fill_cell",
+            "tile": "NW",
+            "targetX": 4,
+            "targetY": 4,
+            "text": "Now tap the [ ╝ ] in your inventory. It flies straight to the marked cell."
+          },
+          {
+            "type": "select_cell",
+            "targetX": 2,
+            "targetY": 0,
+            "text": "Mark the top cell of the middle column.",
+            "before": [
+              {
+                "say": "See the yellow cells? Energy caches."
+              },
+              {
+                "guide": {
+                  "url": "https://mtxgames.lk/guides/tiles/energy_block/page_1.html",
+                  "title": "FIELD MANUAL // ENERGY CACHE",
+                  "subtitle": "SYSTEM DIRECTIVE // DOUBLE-EDGED PROTOCOL",
+                  "fallbackText": "Energy caches are a double-edged sword: route the payload through them to strengthen the uplink, leave them behind and the system punishes you.",
+                  "pages": [1]
+                }
+              },
+              {
+                "say": "Energy is a double-edged sword. Run the payload through it and the uplink holds stronger. Leave it behind and the system punishes us."
+              },
+              {
+                "say": "So we take every cache on this node."
+              }
+            ]
+          },
+          {
+            "type": "fill_cell",
+            "tile": "SW",
+            "targetX": 2,
+            "targetY": 0,
+            "text": "Send the [ ╗ ] there. It turns the payload down through the middle cache."
+          },
+          {
+            "type": "select_cell",
+            "targetX": 2,
+            "targetY": 4,
+            "text": "Now mark the bottom cell of the same column."
+          },
+          {
+            "type": "fill_cell",
+            "tile": "NE",
+            "targetX": 2,
+            "targetY": 4,
+            "text": "Send the [ ╚ ]. It turns the payload right, through the last caches and up to the server."
+          }
+        ],
+        "successMessage": "Route locked. Watch the hub."
+      },
+      "moments": {
+        "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
+      },
+      "reset": {
+        "epoch": 1,
+        "action": "reset_rewards"
+      },
+      "boardVersion": 2
     }
   ]
 }

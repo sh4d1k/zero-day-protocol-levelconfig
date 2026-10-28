@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "publishedAt": "2026-10-27T17:45:18.922Z",
+  "publishedAt": "2026-10-28T05:06:00.494Z",
   "packs": {
     "A": {
       "version": 4,
@@ -21,9 +21,9 @@
       "minBuildCode": 14
     },
     "Q": {
-      "version": 1,
-      "file": "pack-Q.v1.json",
-      "sha256": "367860bf5fc65f6e8910f74d01e8c102eaee49bf0dcff00559afd4032f6f919b",
+      "version": 2,
+      "file": "pack-Q.v2.json",
+      "sha256": "a1640a2a3004f0b5967355c363d2ac5a0f5c8d6870fbeec632abc2ddde632d5d",
       "minBuildCode": 14
     }
   },
@@ -32,6 +32,11 @@
       "BOOT_ORIGIN": [1, 2, 3, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
       "NEXUS": [101],
       "PROPEDIEM": [201]
+    },
+    "groups": {
+      "QA": {
+        "BOOT_ORIGIN": [1, 2, 1605, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+      }
     }
   }
 }
