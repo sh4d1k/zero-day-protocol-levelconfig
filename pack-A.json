@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 4,
+  "version": 5,
   "levels": [
     {
       "id": 1,
@@ -98,7 +98,7 @@
         "launchGuideUrl": "https://mtxgames.lk/guides/tiles/start_node/page_1.html"
       },
       "reset": {
-        "epoch": 1,
+        "epoch": 2,
         "action": "reset_rewards"
       }
     },
@@ -181,7 +181,7 @@
       },
       "speed": 80,
       "reset": {
-        "epoch": 2,
+        "epoch": 3,
         "action": "reset_rewards"
       }
     },
@@ -299,7 +299,7 @@
         "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
       },
       "reset": {
-        "epoch": 1,
+        "epoch": 2,
         "action": "reset_rewards"
       }
     },
