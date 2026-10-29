@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "A",
-  "version": 5,
+  "version": 6,
   "levels": [
     {
       "id": 1,
@@ -117,10 +117,10 @@
       "initiateCountdown": 0,
       "planningPhaseTimer": 0,
       "map": [
-        ["E", "0", "0", "0"],
-        ["0", "0", "0", "0"],
-        ["0", "0", "0", "0"],
-        ["SR", "0", "0", "W"]
+        ["E", "0", "0", "ICE_BASIC"],
+        ["0", "0", "0", "ICE_BASIC"],
+        ["0", "0", "0", "ICE_BASIC"],
+        ["SR", "0", "0", "ICE_BASIC"]
       ],
       "inventory": {
         "NW": 1,
@@ -320,10 +320,10 @@
       "initiateCountdown": 3000,
       "packetDelays": [0, 1500, 1500],
       "map": [
-        ["W", "W", "W", "W", "W"],
         ["W", "0", "0", "0", "E"],
         ["W", "0", "W", "W", "W"],
-        ["0", "0", "0", "0", "W"],
+        ["W", "0", "W", "W", "0"],
+        ["0", "0", "0", "0", "0"],
         ["SU", "W", "W", "W", "W"]
       ],
       "inventory": {
