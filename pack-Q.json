@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "pack": "Q",
-  "version": 2,
+  "version": 3,
   "levels": [
     {
       "id": 1603,
@@ -116,6 +116,37 @@
       "moments": {
         "victory": ["Clean. That's how you read a node.", "Someone set that auto-launch on purpose. Whoever it is, they knew we were coming."]
       }
+    },
+    {
+      "id": 1604,
+      "title": "CORRIDOR // TRACE BURST",
+      "baseRewards": {
+        "xp": 100,
+        "dc": 50,
+        "qc": 0
+      },
+      "boardWidth": 9,
+      "boardHeight": 6,
+      "map": [
+        ["SR", "0", "0", "0", "EMP", "0", "0", "0", "PSW"],
+        ["PSE", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "0", "0", "0", "0", "0", "0", "PSW"],
+        ["PSE", "0", "0", "0", "0", "0", "0", "0", "0"],
+        ["0", "0", "PSE", "0", "PSW", "0", "PSE", "0", "PSW"],
+        ["PNE", "0", "PNW", "0", "PNE", "0", "0", "0", "E"]
+      ],
+      "inventory": {
+        "NW": 1
+      },
+      "packetDelays": [0, 0, 0, 0, 0],
+      "timeLimit": 20,
+      "cipherConfig": {
+        "pinLength": 0
+      },
+      "cipherGate": false,
+      "speed": 100,
+      "initiateCountdown": 3000,
+      "planningPhaseTimer": 10000
     },
     {
       "id": 1605,
