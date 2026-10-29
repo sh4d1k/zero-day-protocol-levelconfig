@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "publishedAt": "2026-10-29T08:35:44.783Z",
+  "publishedAt": "2026-10-29T08:51:32.762Z",
   "packs": {
     "A": {
       "version": 5,
@@ -21,9 +21,9 @@
       "minBuildCode": 14
     },
     "Q": {
-      "version": 3,
-      "file": "pack-Q.v3.json",
-      "sha256": "a5ca23915f0c0fc37924e5c2aad6a4434ba9fd06b4ad6c65d918c966d78e32f7",
+      "version": 4,
+      "file": "pack-Q.v4.json",
+      "sha256": "60ad3a812a6ee16b21e369f2af792f54620ff1ac46a3d07effece54a056eec04",
       "minBuildCode": 14
     }
   },
