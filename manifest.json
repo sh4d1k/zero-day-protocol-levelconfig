@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "publishedAt": "2026-11-09T14:04:19.588Z",
+  "publishedAt": "2026-11-13T20:11:42.385Z",
   "packs": {
     "A": {
       "version": 7,
@@ -21,9 +21,9 @@
       "minBuildCode": 14
     },
     "Q": {
-      "version": 4,
-      "file": "pack-Q.v4.json",
-      "sha256": "60ad3a812a6ee16b21e369f2af792f54620ff1ac46a3d07effece54a056eec04",
+      "version": 5,
+      "file": "pack-Q.v5.json",
+      "sha256": "d82591e469c75dc63bb1a0caac010bb9f7a405a8e94426dac301be89af6c204d",
       "minBuildCode": 14
     }
   },
@@ -35,7 +35,7 @@
     },
     "groups": {
       "QA": {
-        "BOOT_ORIGIN": [1, 2, 3, 1604, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
+        "BOOT_ORIGIN": [1601, 2, 3, 1604, 5, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32]
       }
     }
   }
